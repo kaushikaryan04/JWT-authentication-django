@@ -1,0 +1,13 @@
+
+For normal email login
+
+curl -X POST -d "client_id=hslgc724q93TrOOoIkFZR7JABFmp53qDgw9oXllF&client_secret=tbt3hREzCbtNkdS9J4PGt70t8Yoc3ixXHlX4KDXjHVeUQJYs3YS9qJ7QOyyxUYZWX5ljecCdKDJWHT5fxdAuiRU2zUKbNrq5GbRlyxM71ruUvhwSSBqxssURhIvkGIFa&grant_type=password&username=kaushikaryan04&password=1234" http://localhost:8000/auth/token
+
+for google login 
+curl -X POST -d "grant_type=convert_token&client_id=wcihxJvKVDoiMbmgv7h2wlMZukZXuKdg3YE0VQaz&client_secret=ZQmev5UCrPBZLGwtrY5IJhrp7jwypsRq2noEflZrj78dSbVGAhiQOmkYY2PMVsyxQWfEQGeJceeNx8Ft9ZXQV5gy8rNqch9MIZL9UZIy2NfVJMuTg8BRRGAZp9eygKcm&backend=google-oauth2&token=ya29.a0Ael9sCPlrGL5pPAOj8W08l_9k8p6BaPj--u7L2cpiRwr2V3WQN4KkOygga9_TCLaDzWgKNi7iddp6YCcaje6uKS_9OydoCgYgZlponKKeSUTB0ZWg8Ptdbt_qq-A3qfGyvlysDJWGa5hK8UbqDSrX7qoVECAD9EaCgYKAZoSARESFQF4udJhYJIVO4HwajUa2gJdJ7a5ug0166" http://localhost:8000/auth/convert-token
+
+
+curl -X POST -d "grant_type=convert_token&client_id=<django-oauth-generated-client_id>&client_secret=<django-oauth-generated-client_secret>&backend=google-oauth2&token=<google_token>" http://localhost:8000/auth/convert-token
+
+client_id =wcihxJvKVDoiMbmgv7h2wlMZukZXuKdg3YE0VQaz (drf - app)
+client_secret = ZQmev5UCrPBZLGwtrY5IJhrp7jwypsRq2noEflZrj78dSbVGAhiQOmkYY2PMVsyxQWfEQGeJceeNx8Ft9ZXQV5gy8rNqch9MIZL9UZIy2NfVJMuTg8BRRGAZp9eygKcm
