@@ -4,7 +4,7 @@ from cloudinary.models import CloudinaryField
 
 
 
-
+#use a set to see each user's liked photos if user have liked a particular photo do not let him like again
 # user
 class User(AbstractUser):
     MALE = 'Male'
@@ -22,10 +22,19 @@ class Post(models.Model):
     caption = models.CharField(max_length= 200)
     image = CloudinaryField('image')
     likes= models.IntegerField(default=0)
-
+    
     def likePost(self):
         self.likes+=1
         self.save()
+
+class Like(models.Model):
+    user = models.ForeignKey(User , on_delete=models.CASCADE)
+    post = models.ForeignKey(Post , on_delete=models.CASCADE)
+    liked_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        unique_together = ('user'  , 'post')
+        
         
 
 # for future use https://www.section.io/engineering-education/uploading-images-to-cloudinary-from-django-application/#setting-up-cloudinary
