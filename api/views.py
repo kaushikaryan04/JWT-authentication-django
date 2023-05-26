@@ -24,7 +24,7 @@ class ListAllPost(generics.ListAPIView):
     queryset = Post.objects.all()
     serializer_class = PostsSerializer
 
-class CreatPost(generics.CreateAPIView):
+class CreatePost(generics.CreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostsSerializer
 
